@@ -58,3 +58,11 @@ Click `Install Now`
 1. In a terminal windows enter `sudo echo 'blacklist i2c_hid' >> /etc/modprobe.d/blacklist.conf`
 2. Enter `sudo depmod -a`
 3. Enter `sudo update-initramfs -u`
+### Do nothing
+* gparted is already in 18.04, no need to add gparted driver
+* Wireless and wired ethernet will work, no need to add new drivers
+* The share drive will be available automatically (in `File Manager` select `+Other Locations`), no need to add NVMe drivers
+* Do not add any drivers from any source you don't know, even github. This installation explicitly doesn't require anything except standard tools and setup.
+## Caveats
+* Sleep/Suspend in Ubuntu has show some problems - still investigating - stay tuned
+* Windows 10 Professional has issues with the latest versions of Anaconda3
