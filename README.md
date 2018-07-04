@@ -66,3 +66,4 @@ Click `Install Now`
 ## Caveats
 * Sleep/Suspend in Ubuntu has show some problems - still investigating - stay tuned
 * Windows 10 Professional has issues with the latest versions of Anaconda3
+* Cuda drivers are not available for 18.04, see https://askubuntu.com/questions/1028830/how-do-i-install-cuda-on-ubuntu-18-04
