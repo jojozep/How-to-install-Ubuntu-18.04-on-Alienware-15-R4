@@ -12,7 +12,7 @@ This guide borrows heavily from [alienware15r3_ubuntu14 guide](https://github.co
 ## Pre-installation
 ### Setup Ubuntu installation drive 
 You need to have a drive to set up Ubuntu on. You have two choices:
-1. Use a new drive<br/>I bought a new SSD drive as they are relatively inexpensive. The 15R4 has 2 spare M.2 SSD slots: a 2242 and 2280. I kept the 2280 slot as a future spare, and bought a 2242 form SSD drive. They are hard to find, but I would recommend the [Toshiba RC100](https://www.amazon.com/gp/product/B07DD4FWRL). Installation of the drive is relatively simple, you will need a small philips-head screwdriver and remove the 7 screws at the bottom of the laptop to access the SSD slot (see [Alienware Documentation](https://www.dell.com/support/home/us/en/19/product-support/product/alienware-15/manuals) for diagrams).
+1. Use a new drive<br/>I bought a new SSD drive as they are relatively inexpensive. The 15R4 has 2 spare M.2 SSD slots: a 2242 and 2280. I kept the 2280 slot as a future spare, and bought a 2242 form SSD drive. They are hard to find, but I would recommend the [Toshiba RC100](https://www.amazon.com/gp/product/B07DD4FWRL). Installation of the drive is relatively simple, you will need a small philips-head screwdriver and remove the 7 screws at the bottom of the laptop to access the SSD slot (see [Alienware Documentation](https://www.dell.com/support/home/us/en/04/product-support/product/alienware-15-r4/manuals) for diagrams).
 2. Resize your existing drive to create space for Ubuntu<br/>Use the Windows “Disk Management” utility (in Control Panel>>Administrative Tools>>Computer Management), select the drive, and "then Shrink Volume" (right-mouse click on the drive). You should allocate at least 30GB, and preferably 50GB.
 ### Create a USB boot drive
 1. Download `Ubuntu 18.04 LTS` ISO from the [Ubuntu download site](https://www.ubuntu.com/download/desktop)
@@ -28,7 +28,7 @@ This is required so that you can also boot to Ubuntu later
 5. Highlight `Secure Boot`
 6. Press `Enter`, select `Disable` and press `Enter` again.
 7. Press `F10` and select `Yes`<br/>
-`NOTE:` If you are using a PIN instead of a password to login, you may get an error when logging in. If so, select the option to login using a password, and then reset the PIN when you have logged in.
+`NOTE:` If you are using a PIN instead of a password to login, you may get a 0x80070032 error when logging in. If so, select the option to login using a password, and then reset the PIN when you have logged in. If you cannot reset the PIN then you have to remove all content under the `C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\NGC` directory. This is a protected directory, so you will have to take ownership before deleting contents ([more information](https://answers.microsoft.com/en-us/windows/forum/windows_10-hello-winpc/login-setup-wont-take-a-pin/248fbc21-eb94-41b5-8e2f-1e134dc5316e)).
 ### Set Boot Mode to AHCI
 The default boot mode is RAID. Directly setting boot mode to AHCI in the BIOS will result in Windows 10 boot failure. Follow the steps below to boot in AHCI successfully.
 1. Run `Command Prompt` as Administrator<br/>In the search bar, search for `Command Prompt`, right-mouse click on the icon and select `Run as Administrator`
